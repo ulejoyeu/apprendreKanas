@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center>
+      Apprendre les kanas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding color="secondary">
+  <ion-card color="light" margin-bottom>
+    <ion-card-header>
+      <ion-card-title>Type de kanas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-segment>
+        <ion-segment-button checked>
+          <ion-label>Hiraganas</ion-label>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-label>Katakanas</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light" margin-bottom>
+    <ion-card-header>
+      <ion-card-title>Sens de jeu</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-segment>
+        <ion-segment-button checked>
+          <ion-label>Kanas &rarr; Romajis</ion-label>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-label>Romaji &rarr; Kanas</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light" margin-bottom>
+    <ion-card-header>
+      <ion-card-title>Nombre de questions</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <ion-input margin type="number" placeholder="Nombre de questions"></ion-input>
+    </ion-card-content>
+  </ion-card>
+
+  <div text-center>
+    <ion-button color="tertiary">Jouer</ion-button>
+  </div>
+</ion-content>
