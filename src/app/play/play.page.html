@@ -10,4 +10,36 @@
 </ion-header>
 
 <ion-content padding color="secondary">
+  <p text-right class="score"><b>Score : </b><span class="score-value">1/10</span></p>
+
+  <ion-card color="light" class="character-to-guess">
+    <ion-card-content text-center>
+      <h1>か</h1>
+    </ion-card-content>
+  </ion-card>
+  <br>
+
+  <ion-row class="answers" margin-top>
+    <ion-col size="6">
+      <ion-button color="success">KA</ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button color="danger">YO</ion-button>
+    </ion-col>
+  </ion-row>
+  
+  <ion-row class="answers">
+    <ion-col size="6">
+      <ion-button color="medium">U</ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button color="medium">TE</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button color="tertiary">
+      <ion-icon name="arrow-dropright"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
