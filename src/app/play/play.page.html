@@ -9,37 +9,48 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding color="secondary">
-  <p text-right class="score"><b>Score : </b><span class="score-value">1/10</span></p>
+<ion-content padding color="secondary" *ngIf="!playService.partieFinie()">
+  <p text-right class="score"><b>Score : </b><span class="score-value">{{ playService.nbBonnesReponses }} / {{ playService.nbQuestionsPosees }}</span></p>
 
   <ion-card color="light" class="character-to-guess">
     <ion-card-content text-center>
-      <h1>か</h1>
+      <h1>{{ playService.caractere|uppercase }}</h1>
     </ion-card-content>
   </ion-card>
   <br>
 
   <ion-row class="answers" margin-top>
     <ion-col size="6">
-      <ion-button color="success">KA</ion-button>
+      <ion-button [color]="couleurBouton[0]" (click)="repondre(0)">{{ playService.propositions[0] }}</ion-button>
     </ion-col>
     <ion-col size="6">
-      <ion-button color="danger">YO</ion-button>
+      <ion-button [color]="couleurBouton[1]" (click)="repondre(1)">{{ playService.propositions[1] }}</ion-button>
     </ion-col>
   </ion-row>
   
   <ion-row class="answers">
     <ion-col size="6">
-      <ion-button color="medium">U</ion-button>
+      <ion-button [color]="couleurBouton[2]" (click)="repondre(2)">{{ playService.propositions[2] }}</ion-button>
     </ion-col>
     <ion-col size="6">
-      <ion-button color="medium">TE</ion-button>
+      <ion-button [color]="couleurBouton[3]" (click)="repondre(3)">{{ playService.propositions[3] }}</ion-button>
     </ion-col>
   </ion-row>
 
-  <ion-fab vertical="bottom" horizontal="end">
+  <ion-fab vertical="bottom" horizontal="end" (click)="questionSuivante()">
     <ion-fab-button color="tertiary">
       <ion-icon name="arrow-dropright"></ion-icon>
     </ion-fab-button>
   </ion-fab>
+</ion-content>
+
+<ion-content class="success-panel" padding color="secondary" *ngIf="playService.partieFinie()">
+  <ion-card color="light">
+    <ion-card-content text-center>
+      <h1>Vous avez un score de</h1><br>
+      <h1>{{ playService.nbBonnesReponses }} / {{ playService.nbQuestionsPosees }}</h1>
+      <br>
+      <ion-button color="tertiary" (click)="rejouer()">Rejouer</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

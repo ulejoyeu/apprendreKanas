@@ -12,11 +12,11 @@
       <ion-card-title>Type de kanas</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <ion-segment>
-        <ion-segment-button checked>
+      <ion-segment [(ngModel)]="typeKanas">
+        <ion-segment-button value="hiragana" checked>
           <ion-label>Hiraganas<br>ひらがな</ion-label>
         </ion-segment-button>
-        <ion-segment-button>
+        <ion-segment-button value="katakana">
           <ion-label>Katakanas<br>カタカナ</ion-label>
         </ion-segment-button>
       </ion-segment>
@@ -28,11 +28,11 @@
       <ion-card-title>Sens de jeu</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <ion-segment>
-        <ion-segment-button checked>
+      <ion-segment [(ngModel)]="sensJeu">
+        <ion-segment-button value="kana-romaji" checked>
           <ion-label>Kanas &rarr; Romajis</ion-label>
         </ion-segment-button>
-        <ion-segment-button>
+        <ion-segment-button value="romaji-kana">
           <ion-label>Romaji &rarr; Kanas</ion-label>
         </ion-segment-button>
       </ion-segment>
@@ -44,11 +44,11 @@
       <ion-card-title>Nombre de questions</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-        <ion-input margin type="number" placeholder="Nombre de questions"></ion-input>
+        <ion-input [(ngModel)]="nbQuestions" margin type="number" placeholder="Nombre de questions"></ion-input>
     </ion-card-content>
   </ion-card>
 
   <div text-center>
-    <ion-button routerLink="/play" color="tertiary">Jouer</ion-button>
+    <ion-button (click)="play()" color="tertiary">Jouer</ion-button>
   </div>
 </ion-content>

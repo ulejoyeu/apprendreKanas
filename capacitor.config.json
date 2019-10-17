@@ -1,0 +1,7 @@
+{
+  "appId": "com.ulejoyeu.apprendre-kanas",
+  "appName": "apprendre-kanas",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

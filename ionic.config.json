@@ -1,5 +1,7 @@
 {
   "name": "apprendreKanas",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
